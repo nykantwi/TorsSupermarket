@@ -1,54 +1,49 @@
 package supermarked.data;
 
 public class Vare {
-    private String varenummer;
+
+    private String ean;
     private String navn;
-    private String prisAendringsDato;
     private double pris;
-    private int antal;
+    private double maengde;
     private String enhed;
 
-
-    public Vare(String varenummer, String navn, String prisAendringsDato, double pris, int antal, String enhed) {
-        this.varenummer = varenummer;
+    public Vare(String ean, String navn, double pris, double maengde, String enhed) {
+        this.ean = ean;
         this.navn = navn;
-        this.prisAendringsDato = prisAendringsDato;
         this.pris = pris;
-        this.antal = antal;
+        this.maengde = maengde;
         this.enhed = enhed;
     }
 
-    public String getPrisAendringsDato() {
-        return prisAendringsDato;
+    public String getEan() {
+        return ean;
     }
 
     public String getNavn() {
         return navn;
     }
 
-    public String getVarenummer() {
-        return varenummer;
+    public double getPris() {
+        return pris;
+    }
+
+    public double getMaengde() {
+        return maengde;
     }
 
     public String getEnhed() {
         return enhed;
     }
 
-    public int getAntal() {
-        return antal;
-    }
-
-    public double getPris() {
-        return pris;
-    }
-
     @Override
     public String toString() {
         return "Vare{" +
-                "enhed='" + enhed + '\'' +
+                "ean='" + ean + '\'' +
                 ", navn='" + navn + '\'' +
-                ", prisAendringsDato=" + prisAendringsDato +
+                ", pris=" + pris +
+                ", maengde=" + maengde +
+                ", enhed='" + enhed + '\'' +
                 '}';
     }
-
 }

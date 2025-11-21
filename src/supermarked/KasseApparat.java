@@ -77,7 +77,7 @@ public class KasseApparat {
     private Map<String, Integer> tælVarer(Collection<Vare> kurv) {
         Map<String, Integer> counts = new HashMap<>();
         for (Vare v : kurv) {
-            counts.put(v.getVarenummer(), counts.getOrDefault(v.getVarenummer(), 0) + 1);
+            counts.put(v.getEan(), counts.getOrDefault(v.getEan(), 0) + 1);
         }
         return counts;
     }

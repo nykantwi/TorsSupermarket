@@ -15,7 +15,7 @@ public class Main {
 
 
         Map<String, Vare> tilbudsVarer = new HashMap<>(CsvLoader.load("src/supermarked/data/tilbud.csv"));
-        tilbudsVarer.put("123", new Vare("123", "Mælk", "2025-11-01", 8.0, 1, "liter"));
+        tilbudsVarer.put("123", new Vare("123", "Mælk", 22, 8.0,  "liter"));
 
         KasseApparat kasse = new KasseApparat(alleVarer, tilbudsVarer);
 
